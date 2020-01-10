@@ -70,3 +70,5 @@ x1 = 20;
 console.log(x1);
 console.log(y1);
 //result will be x1= 20, since it changed value, but y1 will be 10. we are dealing with primitives not Objs
+// Bottom line : when refering to an obj you are pointing to its address, referencing it, all changes are immediate,
+// when using a primitive it has its own value and isnt referenced.
