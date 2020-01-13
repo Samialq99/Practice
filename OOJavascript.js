@@ -72,3 +72,22 @@ console.log(y1);
 //result will be x1= 20, since it changed value, but y1 will be 10. we are dealing with primitives not Objs
 // Bottom line : when refering to an obj you are pointing to its address, referencing it, all changes are immediate,
 // when using a primitive it has its own value and isnt referenced.
+
+function increase(number) {
+  number++;
+  console.log(number); // number here is local and is parameter doesnt work outside this fn
+}
+
+increase(11);
+
+// Ways to add more properties to an Object, unlike Java and C# Objs in javascript are Dynamic no need to go back and change them.
+
+let sqaure = {
+  corners: 4
+};
+
+sqaure.location = { v: 1 }; //adds property location
+sqaure["dimension"] = "2d"; //adds property dimensions
+let edges = "sharp";
+sqaure[edges] = { u: 1 }; //adds property sharp = u:1
+// load the index.html that refers to this script file and use inspect , click console and type sqaure to see all the object properties.
