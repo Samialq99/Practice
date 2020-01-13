@@ -112,3 +112,5 @@ for (let key in sqaure) {
 // we can use the Object.keys(sqaure) method thats built in, it creates an array with all the keys of an object, must store then in array
 const keysofobjarr = Object.keys(sqaure);
 console.log(keysofobjarr); // in console you should see (4) ["corners", "location", "dimension", "sharp"]
+// what is the (in) operator ?, it helps you find something.
+if ("radius" in circle) console.log("circle has a radius");
