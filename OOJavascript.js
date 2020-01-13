@@ -89,5 +89,26 @@ let sqaure = {
 sqaure.location = { v: 1 }; //adds property location
 sqaure["dimension"] = "2d"; //adds property dimensions
 let edges = "sharp";
-sqaure[edges] = { u: 1 }; //adds property sharp = u:1
+sqaure[edges] = { u: 1 }; //adds property sharp = u:1 , this is useful if your adding a property like object-location, special characters.
 // load the index.html that refers to this script file and use inspect , click console and type sqaure to see all the object properties.
+//in the console type the object name to see it in details. like square then enter.
+/* console shows the following when you type object name then enter: sqaure
+{corners: 4, location: {…}, dimension: "2d", sharp: {…}}corners: 4location: {v: 1}dimension: "2d"sharp: {u: 1}__proto__: Object */
+function showProperties(someobj) {
+  for (let key in someobj) {
+    console.log(key);
+  }
+}
+// this will iterate over each key in the object.
+showProperties(sqaure);
+
+// the for loop bellow only shows functions in the object, if you want properties only change to !== "function"
+for (let key in sqaure) {
+  if (typeof sqaure[key] == "function") {
+    console.log(key, circle[key]);
+  }
+}
+
+// we can use the Object.keys(sqaure) method thats built in, it creates an array with all the keys of an object, must store then in array
+const keysofobjarr = Object.keys(sqaure);
+console.log(keysofobjarr); // in console you should see (4) ["corners", "location", "dimension", "sharp"]
